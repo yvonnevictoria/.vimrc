@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'shougo/deoplete.nvim'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Quramy/tsuquyomi'
@@ -42,8 +42,18 @@ map <C-u> :UndotreeToggle<CR>
 nmap <S-Enter> O <Esc>
 nmap <CR> o <Esc>
 
-set ts=4
-set sw=4
+" make tab indents have 4 spaces
+set tabstop=4
+set shiftwidth=4
+
+" set number of columns for tab & exapnd to spaces
+" comment out if using tabs
+set softtabstop=4
+set expandtab
+
+" shorthand: :set ts=4 sw=4 sts=4 et
+
+" visual config
 set nu
 set mouse=a
 
