@@ -37,9 +37,10 @@ set termguicolors
 colorscheme onedark
 syntax on
 
-map <C-n> :NERDTreeToggle<CR>
-map <C-u> :UndotreeToggle<CR>
-nmap <S-Enter> O <Esc>
+let NERDTreeShowBookmarks=1
+
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-u> :UndotreeToggle<CR>
 nmap <CR> o <Esc>
 
 " make tab indents have 4 spaces
