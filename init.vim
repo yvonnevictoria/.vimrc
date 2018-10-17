@@ -31,17 +31,17 @@ Plugin 'Shougo/vimproc.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 " neovim
 set termguicolors
 colorscheme onedark
 syntax on
+set list listchars=space:·,tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<,nbsp:•
 
 let NERDTreeShowBookmarks=1
 
-nmap <C-n> :NERDTreeToggle<CR>
-nmap <C-u> :UndotreeToggle<CR>
-nmap <CR> o <Esc>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-u> :UndotreeToggle<CR>
+nnoremap <CR> o <Esc>
 
 " make tab indents have 4 spaces
 set tabstop=4
@@ -53,6 +53,9 @@ set softtabstop=4
 set expandtab
 
 " shorthand: :set ts=4 sw=4 sts=4 et
+
+" remove trailing spaces on save
+autocmd BufWritePre * %s/\s\+$//e
 
 " visual config
 set nu
